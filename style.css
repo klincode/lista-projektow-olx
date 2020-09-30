@@ -71,15 +71,37 @@ h2 {
   overflow: hidden;
   height: 500px;
   width: 90%;
-  /* position: absolute; */
-  /* top: 60%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
   margin: 5%;
-
   box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.315);
   border-radius: 3px;
+}
 
+.single-project {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  ;
+}
+
+.single-image-wrapper {
+  text-align: center;
+}
+
+.single-image-wrapper img {
+  max-width: 65%;
+  text-align: center;
+}
+
+.single-image {
+  order: 1;
+  flex-basis: 100%;
+  position: relative;
+}
+
+.single-description {
+  text-align: center;
+  /* flex-basis: 100%; */
+  order: 0;
 }
 
 .image img:hover {
@@ -124,7 +146,7 @@ i {
   transition: 0.5s;
   text-transform: uppercase;
   font-size: 1.2rem;
-  ;
+
 }
 
 .links a:hover i {
@@ -144,10 +166,13 @@ i {
   order: 2;
 }
 
+
 @media (max-width: 992px) {
   .project {
     flex-direction: column;
     margin-bottom: 0px;
+    margin-top: 40px;
+
   }
 
   .description {
